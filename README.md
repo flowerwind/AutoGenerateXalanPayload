@@ -10,7 +10,7 @@
 
 ![image-20230117143738105](images/image-20230117143738105.png)
 
-然后运行java -jar AutoGenerateXalanPayload.jar即可，过程中又一些错误抛出，忽略即可
+然后运行java -jar AutoGenerateXalanPayload.jar即可，过程中又一些错误抛出，忽略即可。程序运行完毕后得到的select.xslt即为符合该jdk版本的xalan溢出命令执行的payload
 
 ![image-20230117144434703](images/image-20230117144434703.png)
 
@@ -19,6 +19,10 @@
 https://mp.weixin.qq.com/s/xxAtjFvk9RxWiY-pwGf8Ow
 
 ### JDK版本对比
+
+由于JDK小版本太多，因此我使用了二分法对比了jdk1.6-jdk1.8的版本。用测试1.7版本举例子，先测jdk1.7最高的小版本,得到一个xslt，设定这个xslt内容为A类型。再测试jdk1.7最低的小版本，得到一个xslt，如果这个xslt和1.7最高的小版本生成的内容完全一样，则表示jdk1.7最低到最高之间全部都通用一个A类型的payload。如果不一样的话，那我再取jdk1.7的中间版本测，就这样一直二分，这是我想到的测的最快的方式了，不用全部都安装测试又能覆盖到全部。举一个下面测试好的实例，Jdk-8u301为A类型payload，Jdk-8u202为A类型payload，那Jdk-8u221是这两位的中间版本，他不可能是B类型的payload吧？
+
+下面是我所测试得到的成果，得出jdk1.6到1.8之间有六种payload。
 
 | jdk版本   | xsls类型 |
 | --------- | -------- |
