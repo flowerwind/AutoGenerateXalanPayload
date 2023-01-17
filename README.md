@@ -8,11 +8,11 @@
 
 复制select.bak.xslt为select.xslt，修改自己要执行的命令
 
-![image-20230117143738105](/Users/huhuahua/java代码/AutoGenerateXalanPayload/images/image-20230117143738105.png)
+![image-20230117143738105](images/image-20230117143738105.png)
 
 然后运行java -jar AutoGenerateXalanPayload.jar即可，过程中又一些错误抛出，忽略即可
 
-![image-20230117144434703](/Users/huhuahua/java代码/AutoGenerateXalanPayload/images/image-20230117144434703.png)
+![image-20230117144434703](images/image-20230117144434703.png)
 
 ### 改造思路
 

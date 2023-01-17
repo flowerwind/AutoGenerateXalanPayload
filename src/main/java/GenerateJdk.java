@@ -4,11 +4,6 @@ import java.io.IOException;
 
 public class GenerateJdk {
     public static void main(String args[]) throws IOException {
-        //String[] beforeTwoConstant=new String[]{"atA","atB","atC","atD","atE","atF","atG","atH","atI","atJ","atK","atL","atM","atN","atO","atP","atQ","atR","atS","atT","atU","atV","atW","atX","atY","atZ","aua","aub","auc","aud","aue","auf","aug","auh","aui","auj","auk","aul","aum","aun","auo","aup","auq","aur","aus","aut","auu"};
-        //String[] beforeOneConstant=new String[]{"<xsl:value-of select='ceiling(133829)'/>","<xsl:value-of select='ceiling(133830)'/>","<xsl:value-of select='ceiling(133831)'/>"};
-        //t914-t1051
-        //String[] afterTwoConstant=new String[]{};
-        //String[] afterOneConstant=new String[]{"<xsl:value-of select='ceiling(133840)'/>","<xsl:value-of select='ceiling(133841)'/>","<xsl:value-of select='ceiling(133842)'/>"};
         compile();
         byte[] selectClassBytes=Util.readFromSourceFile("select.class");
         String selectXsltString=new String(Util.readFromSourceFile("select.xslt"));
